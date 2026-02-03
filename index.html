@@ -8,11 +8,11 @@
     <title>Código com Propósito</title>
     <meta name="description" content="Uma incubadora de talentos sociais transformando estudantes em referências através de projetos de impacto real na periferia." />
     
-    <!-- Open Graph / Facebook / WhatsApp (Pra ficar bonito no share) -->
+    <!-- Open Graph / Facebook / WhatsApp -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Código com Propósito | Incubadora Social" />
     <meta property="og:description" content="Transformando código em impacto. Junte-se ao movimento que conecta tecnologia e ascensão social." />
-    <meta property="og:image" content="https://picsum.photos/1200/630?grayscale" /> <!-- Imagem de capa pro share -->
+    <meta property="og:image" content="https://picsum.photos/1200/630?grayscale" />
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -20,6 +20,31 @@
     <meta name="twitter:description" content="Transformando código em impacto e estudantes em referências." />
     
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              green: {
+                400: '#4ade80',
+                500: '#22c55e',
+                600: '#16a34a',
+              }
+            },
+            animation: {
+              'fade-in-up': 'fadeInUp 1s ease-out forwards',
+              'pulse': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            },
+            keyframes: {
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
       
@@ -29,7 +54,6 @@
         color: #ffffff;
       }
 
-      /* Scrollbar customizada pro tema dark */
       ::-webkit-scrollbar {
         width: 8px;
       }
@@ -67,7 +91,6 @@
 </head>
   <body>
     <div id="root"></div>
-    <!-- O PULO DO GATO: Chama o arquivo principal do React -->
     <script type="module" src="/index.tsx"></script>
   </body>
 </html>

@@ -1,4 +1,3 @@
-import React from 'react';
 import { 
   UserPlus, Users, Award, Zap, 
   Brain, Rocket, Shield, 
